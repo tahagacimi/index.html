@@ -1,0 +1,85 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 1.75em; /* 75% larger than default */
+}
+
+.container {
+    padding: 15px;
+}
+
+.section {
+    position: relative;
+    background-color: #f9f9f9;
+    border: 1px solid black;
+    margin: 15px;
+    padding: 40px 15px 15px 15px; /* Extra padding at the top for the title */
+}
+
+.section-title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    border: 1px solid black;
+    font-size: 1.25em; /* 25% larger than default */
+}
+
+#title1 {
+    background-color: #ffcccb; /* Light red */
+}
+
+#title2 {
+    background-color: #ff6666; /* Darker red */
+    color: white; /* Ensure text is readable */
+}
+
+#title3 {
+    background-color: #ffcc99; /* Light orange */
+}
+
+/* Desktop View (992px and above) */
+@media (min-width: 992px) {
+    .section {
+        float: left;
+        width: 31.33%; /* Equal width for 3 sections */
+        margin: 1%; /* Spacing between sections */
+    }
+}
+
+/* Tablet View (768px - 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    #section1, #section2 {
+        float: left;
+        width: 48%; /* Equal width for first 2 sections */
+        margin: 1%; /* Spacing between sections */
+    }
+
+    #section3 {
+        clear: both; /* Force to new row */
+        width: 98%; /* Full width */
+        margin: 1%; /* Spacing */
+    }
+}
+
+/* Mobile View (767px and below) */
+@media (max-width: 767px) {
+    .section {
+        width: 100%; /* Full width */
+        margin: 15px 0; /* Vertical spacing only */
+    }
+}
